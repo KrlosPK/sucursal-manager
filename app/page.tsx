@@ -1,9 +1,8 @@
-import { Navbar } from '@/components/organisms/Navbar'
-
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-    </main>
+    <>
+      <h1>Sucursal Manager</h1>
+      <p>This is a demo application for managing branches in a company.</p>
+    </>
   )
 }
