@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 mb-6">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
         <button
           type="button"
@@ -44,6 +44,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
+                title="Home"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Home
@@ -52,6 +53,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
+                title="Services"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Services
@@ -60,7 +62,8 @@ const Navbar = () => {
             <li>
               <Link
                 href="/login"
-                className="block py-2 px-3 text-blue-600 rounded hover:bg-gray-300 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                title="Login"
+                className="block py-2 px-3 text-blue-300 rounded hover:bg-gray-300 md:hover:bg-transparent md:border-0 hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
                 Login
               </Link>

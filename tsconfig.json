@@ -18,7 +18,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/organisms/*": ["./components/organisms/*"],
+      "@/molecules/*": ["./components/molecules/*"],
+      "@/atoms/*": ["./components/atoms/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

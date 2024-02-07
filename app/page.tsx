@@ -1,8 +1,15 @@
+import { Hero } from '@/components/organisms/Hero'
+import { Services } from '@/components/organisms/Services'
+import { About } from '@/components/organisms/About'
+
 export default function Home() {
   return (
     <>
-      <h1>Sucursal Manager</h1>
-      <p>This is a demo application for managing branches in a company.</p>
+      <Hero />
+
+      <Services />
+
+      <About />
     </>
   )
 }

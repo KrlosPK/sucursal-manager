@@ -8,7 +8,7 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Sucursal Manager',
   description:
-    'Optimiza tu estrategia comercial en LATAM con nuestra plataforma integral de gestión de ventas. Desde el control detallado de proveedores, vendedores y clientes hasta un seguimiento preciso de productos y transacciones en diversas sucursales. Simplifica tu operación, maximiza la eficiencia y adapta la moneda automáticamente según el país. Descubre una nueva era en la administración comercial con nuestro sistema, diseñado para potenciar tu éxito en el mercado latinoamericano.'
+    'Optimize your business strategy in LATAM with our comprehensive sales management platform. From detailed control of suppliers, sales representatives, and customers to precise tracking of products and transactions across multiple branches. Streamline your operation, maximize efficiency, and adapt currency automatically based on the country. Explore a new era in commercial administration with our system, designed to empower your success in the Latin American market.'
 }
 
 export default function RootLayout({
@@ -17,13 +17,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html
+      lang="en"
+      className="bg-white text-black dark:bg-gray-900 dark:text-white"
+    >
       <body className={`${openSans.className} flex flex-col min-h-dvh`}>
         <header>
           <Navbar />
         </header>
 
-        <main>{children}</main>
+        <main className="flex-col p-4 gap-32 max-w-screen-xl flex justify-center mx-auto">
+          {children}
+        </main>
 
         <footer className="min-h-20 bg-blue-500 mt-auto"></footer>
       </body>
