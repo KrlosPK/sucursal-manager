@@ -1,6 +1,6 @@
 import { Hero } from '@/components/organisms/Hero'
 import { Services } from '@/components/organisms/Services'
-import { About } from '@/components/organisms/About'
+import { Testimonials } from '@/components/organisms/Testimonials'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
 
       <Services />
 
-      <About />
+      <Testimonials />
     </>
   )
 }

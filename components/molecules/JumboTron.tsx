@@ -11,7 +11,7 @@ const JumboTron = ({
         {title}
       </h1>
 
-      <p className="mb-4 max-w-sm">{paragraph}</p>
+      <p className="mb-4 max-w-lg text-pretty">{paragraph}</p>
     </>
   )
 }
