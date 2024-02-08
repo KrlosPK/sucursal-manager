@@ -1,14 +1,27 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
-  const [dropNavbar, setDropNavbar] = useState(false)
+  const [dropNavbar, setDropNavbar] = useState<boolean>(false)
+  const [isLogged, setIsLogged] = useState<string | null>(null)
 
   const handleDropNavbar = () => {
     setDropNavbar(!dropNavbar)
   }
+
+  const logOut = () => {
+    window.localStorage.removeItem('isLoggedIn')
+    location.reload()
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const loggedStatus = window.localStorage.getItem('isLoggedIn')
+      setIsLogged(loggedStatus)
+    }
+  }, [])
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 mb-6">
@@ -59,15 +72,19 @@ const Navbar = () => {
                 Services
               </Link>
             </li>
-            <li>
-              <Link
-                href="/login"
-                title="Login"
-                className="block py-2 px-3 text-blue-300 rounded hover:bg-gray-300 md:hover:bg-transparent md:border-0 hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-              >
-                Login
-              </Link>
-            </li>
+            {isLogged === null ? (
+              <li>
+                <Link
+                  href="/login"
+                  title="Login"
+                  className="block py-2 px-3 text-blue-300 rounded hover:bg-gray-300 md:hover:bg-transparent md:border-0 hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Login
+                </Link>
+              </li>
+            ) : (
+              <button onClick={logOut}>Log out</button>
+            )}
           </ul>
         </div>
       </div>
